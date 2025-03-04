@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
@@ -42,7 +43,8 @@ void main(int argc, char** argv){
 	char buffer;
 	strcpy(path,argv[1]);
 
-	printf("%s\n",path);
+	printf("folder's path: %s\n",path);
+    printf("old name: %s\n",oldName);
 	printf("Enter the new name of your folder (max 20):");
 	scanf_s("%s",newName);
 	FILE* file = fopen(path, "r");
